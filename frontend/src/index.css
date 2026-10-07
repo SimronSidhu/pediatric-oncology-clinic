@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #1b2430;
+  background: #eef1f4;
+  font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #eef1f4;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+.room {
+  position: absolute;
+  border: 1px solid #cfd6de;
+  background: #f8fafb;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.room span {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  font-size: 11px;
+  color: #5c6773;
+  font-weight: 600;
+}
+
+.room em {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  font-style: normal;
+  font-size: 11px;
+  color: #1b2430;
+  font-variant-numeric: tabular-nums;
+}
+
+.token {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  margin-left: -11px;
+  margin-top: -11px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  color: white;
+  font-size: 9px;
+  font-weight: 600;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+}
+
+.token.caregiver {
+  width: 16px;
+  height: 16px;
+  margin-left: -6px;
+  margin-top: -4px;
+  font-size: 8px;
+}
+
+.token[data-hot="true"] {
+  outline: 2px solid #9b3a32;
+  outline-offset: 1px;
+}
+
+.token[data-selected="true"] {
+  z-index: 4;
+  outline: 2px solid #1b2430;
+  outline-offset: 2px;
+}
